@@ -38,7 +38,7 @@ if product == 0:
     st.write('商品数を入力してください')
 
 if 0 < product >= 1:
-    col01, col02, col03, col04 = st.beta_columns([4,3,2,2])
+    col01, col02, col03, col04 = st.columns([4,3,2,2])
     with col01:
         item01 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=1)
     with col02:
@@ -50,7 +50,7 @@ if 0 < product >= 1:
         point01_ = st.text_input('商品ポイント', Decimal(point01) * Decimal(amount01), key=4)
 
 if 0 < product >= 2:
-    col05, col06, col07, col08 = st.beta_columns([4,3,2,2])
+    col05, col06, col07, col08 = st.columns([4,3,2,2])
     with col05:
         item02 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=5)
     with col06:
@@ -62,7 +62,7 @@ if 0 < product >= 2:
         point02_ = st.text_input('商品ポイント', Decimal(point02) * Decimal(amount02), key=8)
 
 if 0 < product >= 3:
-    col09, col10, col11, col12 = st.beta_columns([4,3,2,2])
+    col09, col10, col11, col12 = st.columns([4,3,2,2])
     with col09:
         item03 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=9)
     with col10:
@@ -74,7 +74,7 @@ if 0 < product >= 3:
         point03_ = st.text_input('商品ポイント', Decimal(point03) * Decimal(amount03), key=12)
 
 if 0 < product >= 4:
-    col13, col14, col15, col16 = st.beta_columns([4,3,2,2])
+    col13, col14, col15, col16 = st.columns([4,3,2,2])
     with col13:
         item04 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=13)
     with col14:
@@ -86,7 +86,7 @@ if 0 < product >= 4:
         point04_ = st.text_input('商品ポイント', Decimal(point04) * Decimal(amount04), key=16)
 
 if 0 < product >= 5:
-    col17, col18, col19, col20 = st.beta_columns([4,3,2,2])
+    col17, col18, col19, col20 = st.columns([4,3,2,2])
     with col17:
         item05 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=17)
     with col18:
@@ -98,7 +98,7 @@ if 0 < product >= 5:
         point05_ = st.text_input('商品ポイント', Decimal(point05) * Decimal(amount05), key=20)
 
 if 0 < product >= 6:
-    col21, col22, col23, col24 = st.beta_columns([4,3,2,2])
+    col21, col22, col23, col24 = st.columns([4,3,2,2])
     with col21:
         item06 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=21)
     with col22:
@@ -110,7 +110,7 @@ if 0 < product >= 6:
         point06_ = st.text_input('商品ポイント', Decimal(point06) * Decimal(amount06), key=24)
 
 if 0 < product >= 7:
-    col25, col26, col27, col28 = st.beta_columns([4,3,2,2])
+    col25, col26, col27, col28 = st.columns([4,3,2,2])
     with col25:
         item07 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=25)
     with col26:
@@ -122,7 +122,7 @@ if 0 < product >= 7:
         point07_ = st.text_input('商品ポイント', Decimal(point07) * Decimal(amount07), key=28)
 
 if 0 < product >= 8:
-    col29, col30, col31, col32 = st.beta_columns([4,3,2,2])
+    col29, col30, col31, col32 = st.columns([4,3,2,2])
     with col29:
         item08 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=29)
     with col30:
@@ -134,7 +134,7 @@ if 0 < product >= 8:
         point08_ = st.text_input('商品ポイント', Decimal(point08) * Decimal(amount08), key=32)
 
 if 0 < product >= 9:
-    col33, col34, col35, col36 = st.beta_columns([4,3,2,2])
+    col33, col34, col35, col36 = st.columns([4,3,2,2])
     with col33:
         item09 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=33)
     with col34:
@@ -146,7 +146,7 @@ if 0 < product >= 9:
         point09_ = st.text_input('商品ポイント', Decimal(point09) * Decimal(amount09), key=36)
 
 if 0 < product >= 10:
-    col37, col38, col39, col40 = st.beta_columns([4,3,2,2])
+    col37, col38, col39, col40 = st.columns([4,3,2,2])
     with col37:
         item10 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=37)
     with col38:
