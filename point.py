@@ -10,7 +10,7 @@ st.title('付与ポイント計算ツール')
 
 getcontext().prec = 5
 
-# col01, col02, col03 = st.beta_columns(3)
+# col01, col02, col03 = st.columns(3)
 # with col01:
 #     price01 = st.number_input('税込金額', 0, 999999, 0)
 # with col02:
@@ -39,7 +39,7 @@ if product == 0:
 
 if 0 < product >= 1:
     check01 = st.checkbox('ビーンズクラブ会員対象品', key=1001)
-    col01, col01_1, col02, col03, col04 = st.beta_columns([3,3,2,2,2])
+    col01, col01_1, col02, col03, col04 = st.columns([3,3,2,2,2])
     with col01:
         item01 = st.text_input('税込価格', value=0, key=1)
     with col01_1:
@@ -55,7 +55,7 @@ if 0 < product >= 1:
 
 if 0 < product >= 2:
     check02 = st.checkbox('ビーンズクラブ会員対象品', key=1002)
-    col05, col05_1, col06, col07, col08 = st.beta_columns([3,3,2,2,2])
+    col05, col05_1, col06, col07, col08 = st.columns([3,3,2,2,2])
     with col05:
         item02 = st.text_input('税込価格', value=0, key=5)
     with col05_1:
@@ -71,7 +71,7 @@ if 0 < product >= 2:
 
 if 0 < product >= 3:
     check03 = st.checkbox('ビーンズクラブ会員対象品', key=1003)
-    col09, col09_1, col10, col11, col12 = st.beta_columns([3,3,2,2,2])
+    col09, col09_1, col10, col11, col12 = st.columns([3,3,2,2,2])
     with col09:
         item03 = st.text_input('税込価格', value=0, key=9)
     with col09_1:
@@ -87,7 +87,7 @@ if 0 < product >= 3:
 
 if 0 < product >= 4:
     check04 = st.checkbox('ビーンズクラブ会員対象品', key=1004)
-    col13, col13_1, col14, col15, col16 = st.beta_columns([3,3,2,2,2])
+    col13, col13_1, col14, col15, col16 = st.columns([3,3,2,2,2])
     with col13:
         item04 = st.text_input('税込価格', value=0, key=13)
     with col13_1:
@@ -103,7 +103,7 @@ if 0 < product >= 4:
 
 if 0 < product >= 5:
     check05 = st.checkbox('ビーンズクラブ会員対象品', key=1005)
-    col17, col17_1, col18, col19, col20 = st.beta_columns([3,3,2,2,2])
+    col17, col17_1, col18, col19, col20 = st.columns([3,3,2,2,2])
     with col17:
         item05 = st.text_input('税込価格', value=0, key=17)
     with col17_1:
@@ -119,7 +119,7 @@ if 0 < product >= 5:
 
 if 0 < product >= 6:
     check06 = st.checkbox('ビーンズクラブ会員対象品', key=1006)
-    col21, col21_1, col22, col23, col24 = st.beta_columns([3,3,2,2,2])
+    col21, col21_1, col22, col23, col24 = st.columns([3,3,2,2,2])
     with col21:
         item06 = st.text_input('税込価格', value=0, key=21)
     with col21_1:
@@ -135,7 +135,7 @@ if 0 < product >= 6:
 
 if 0 < product >= 7:
     check07 = st.checkbox('ビーンズクラブ会員対象品', key=1007)
-    col25, col25_1, col26, col27, col28 = st.beta_columns([3,3,2,2,2])
+    col25, col25_1, col26, col27, col28 = st.columns([3,3,2,2,2])
     with col25:
         item07 = st.text_input('税込価格', value=0, key=25)
     with col25_1:
@@ -151,7 +151,7 @@ if 0 < product >= 7:
 
 if 0 < product >= 8:
     check08 = st.checkbox('ビーンズクラブ会員対象品', key=1008)
-    col29, col29_1, col30, col31, col32 = st.beta_columns([3,3,2,2,2])
+    col29, col29_1, col30, col31, col32 = st.columns([3,3,2,2,2])
     with col29:
         item08 = st.text_input('税込価格', value=0, key=29)
     with col29_1:
@@ -167,7 +167,7 @@ if 0 < product >= 8:
 
 if 0 < product >= 9:
     check09 = st.checkbox('ビーンズクラブ会員対象品', key=1009)
-    col33, col33_1, col34, col35, col36 = st.beta_columns([3,3,2,2,2])
+    col33, col33_1, col34, col35, col36 = st.columns([3,3,2,2,2])
     with col33:
         item09 = st.text_input('税込価格', value=0, key=33)
     with col33_1:
@@ -183,7 +183,7 @@ if 0 < product >= 9:
 
 if 0 < product >= 10:
     check10 = st.checkbox('ビーンズクラブ会員対象品', key=1010)
-    col37, col37_1, col38, col39, col40 = st.beta_columns([3,3,2,2,2])
+    col37, col37_1, col38, col39, col40 = st.columns([3,3,2,2,2])
     with col37:
         item10 = st.text_input('税込価格', value=0, key=37)
     with col37_1:
