@@ -205,7 +205,7 @@ if product > 0:
     if int(product) == 1:
         if int(point01_) > 0:
             product01 = int(item01)
-            point_re01 = math.floor(int((((Decimal(product01) * Decimal(amount01)) - Decimal(point)) / (Decimal(product01) * Decimal(amount01))) * Decimal(point01))) * Decimal(amount01)
+            point_re01 = math.floor(int((((Decimal(product01)) - Decimal(point)) / (Decimal(product01))) * Decimal(point01))) * Decimal(amount01)
             st.text_input('合計ポイント付与数', point_re01)
         else:
             st.text_input('合計ポイント付与数', 0)
