@@ -26,7 +26,7 @@ silver = 0.01
 white = 0.01
 
 if selected_item == '受注設定':
-    rank = st.sidebar.selectbox('会員ランク', ['ダイヤモンド会員', 'ゴールド会員', 'シルバー会員', 'ホワイト会員'])
+    rank = st.sidebar.selectbox('会員ランク', ['シルバー会員', 'ゴールド会員', 'ダイヤモンド会員', 'ホワイト会員'])
     point = st.sidebar.number_input('利用ポイント', value=0, key=0)
     product = st.sidebar.number_input('商品数', min_value=0, max_value=10, value=0, key=99)
 
