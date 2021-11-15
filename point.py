@@ -38,11 +38,15 @@ if product == 0:
     st.write('商品数を入力してください')
 
 if 0 < product >= 1:
-    col01, col02, col03, col04 = st.columns([4,3,2,2])
+    check01 = st.checkbox('ビーンズクラブ会員対象品', key=1001)
+    col01, col01_1, col02, col03, col04 = st.beta_columns([3,3,2,2,2])
     with col01:
-        item01 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=1)
+        item01 = st.text_input('税込価格', value=0, key=1)
+    with col01_1:
+        if check01 == True:
+            item01 = st.text_input('割引後価格',  math.floor(int(item01) * 0.7), key=111)
     with col02:
-        amount01 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=2)
+        amount01 = st.text_input('数量', value=0, key=2)
     with col03:
         tax01 = st.selectbox('税率', [0.08, 0.1], key=3)
     with col04:
@@ -50,11 +54,15 @@ if 0 < product >= 1:
         point01_ = st.text_input('商品ポイント', Decimal(point01) * Decimal(amount01), key=4)
 
 if 0 < product >= 2:
-    col05, col06, col07, col08 = st.columns([4,3,2,2])
+    check02 = st.checkbox('ビーンズクラブ会員対象品', key=1002)
+    col05, col05_1, col06, col07, col08 = st.beta_columns([3,3,2,2,2])
     with col05:
-        item02 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=5)
+        item02 = st.text_input('税込価格', value=0, key=5)
+    with col05_1:
+        if check02 == True:
+            item02 = st.text_input('割引後価格',  math.floor(int(item02) * 0.7), key=222)
     with col06:
-        amount02 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=6)
+        amount02 = st.text_input('数量', value=0, key=6)
     with col07:
         tax02 = st.selectbox('税率', [0.08, 0.1], key=7)
     with col08:
@@ -62,11 +70,15 @@ if 0 < product >= 2:
         point02_ = st.text_input('商品ポイント', Decimal(point02) * Decimal(amount02), key=8)
 
 if 0 < product >= 3:
-    col09, col10, col11, col12 = st.columns([4,3,2,2])
+    check03 = st.checkbox('ビーンズクラブ会員対象品', key=1003)
+    col09, col09_1, col10, col11, col12 = st.beta_columns([3,3,2,2,2])
     with col09:
-        item03 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=9)
+        item03 = st.text_input('税込価格', value=0, key=9)
+    with col09_1:
+        if check03 == True:
+            item03 = st.text_input('割引後価格',  math.floor(int(item03) * 0.7), key=333)
     with col10:
-        amount03 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=10)
+        amount03 = st.text_input('数量', value=0, key=10)
     with col11:
         tax03 = st.selectbox('税率', [0.08, 0.1], key=11)
     with col12:
@@ -74,11 +86,15 @@ if 0 < product >= 3:
         point03_ = st.text_input('商品ポイント', Decimal(point03) * Decimal(amount03), key=12)
 
 if 0 < product >= 4:
-    col13, col14, col15, col16 = st.columns([4,3,2,2])
+    check04 = st.checkbox('ビーンズクラブ会員対象品', key=1004)
+    col13, col13_1, col14, col15, col16 = st.beta_columns([3,3,2,2,2])
     with col13:
-        item04 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=13)
+        item04 = st.text_input('税込価格', value=0, key=13)
+    with col13_1:
+        if check04 == True:
+            item04 = st.text_input('割引後価格',  math.floor(int(item04) * 0.7), key=444)
     with col14:
-        amount04 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=14)
+        amount04 = st.text_input('数量', value=0, key=14)
     with col15:
         tax04 = st.selectbox('税率', [0.08, 0.1], key=15)
     with col16:
@@ -86,11 +102,15 @@ if 0 < product >= 4:
         point04_ = st.text_input('商品ポイント', Decimal(point04) * Decimal(amount04), key=16)
 
 if 0 < product >= 5:
-    col17, col18, col19, col20 = st.columns([4,3,2,2])
+    check05 = st.checkbox('ビーンズクラブ会員対象品', key=1005)
+    col17, col17_1, col18, col19, col20 = st.beta_columns([3,3,2,2,2])
     with col17:
-        item05 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=17)
+        item05 = st.text_input('税込価格', value=0, key=17)
+    with col17_1:
+        if check05 == True:
+            item05 = st.text_input('割引後価格',  math.floor(int(item05) * 0.7), key=555)
     with col18:
-        amount05 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=18)
+        amount05 = st.text_input('数量', value=0, key=18)
     with col19:
         tax05 = st.selectbox('税率', [0.08, 0.1], key=19)
     with col20:
@@ -98,11 +118,15 @@ if 0 < product >= 5:
         point05_ = st.text_input('商品ポイント', Decimal(point05) * Decimal(amount05), key=20)
 
 if 0 < product >= 6:
-    col21, col22, col23, col24 = st.columns([4,3,2,2])
+    check06 = st.checkbox('ビーンズクラブ会員対象品', key=1006)
+    col21, col21_1, col22, col23, col24 = st.beta_columns([3,3,2,2,2])
     with col21:
-        item06 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=21)
+        item06 = st.text_input('税込価格', value=0, key=21)
+    with col21_1:
+        if check06 == True:
+            item06 = st.text_input('割引後価格',  math.floor(int(item06) * 0.7), key=666)
     with col22:
-        amount06 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=22)
+        amount06 = st.text_input('数量', value=0, key=22)
     with col23:
         tax06 = st.selectbox('税率', [0.08, 0.1], key=23)
     with col24:
@@ -110,11 +134,15 @@ if 0 < product >= 6:
         point06_ = st.text_input('商品ポイント', Decimal(point06) * Decimal(amount06), key=24)
 
 if 0 < product >= 7:
-    col25, col26, col27, col28 = st.columns([4,3,2,2])
+    check07 = st.checkbox('ビーンズクラブ会員対象品', key=1007)
+    col25, col25_1, col26, col27, col28 = st.beta_columns([3,3,2,2,2])
     with col25:
-        item07 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=25)
+        item07 = st.text_input('税込価格', value=0, key=25)
+    with col25_1:
+        if check07 == True:
+            item07 = st.text_input('割引後価格',  math.floor(int(item07) * 0.7), key=777)
     with col26:
-        amount07 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=26)
+        amount07 = st.text_input('数量', value=0, key=26)
     with col27:
         tax07 = st.selectbox('税率', [0.08, 0.1], key=27)
     with col28:
@@ -122,11 +150,15 @@ if 0 < product >= 7:
         point07_ = st.text_input('商品ポイント', Decimal(point07) * Decimal(amount07), key=28)
 
 if 0 < product >= 8:
-    col29, col30, col31, col32 = st.columns([4,3,2,2])
+    check08 = st.checkbox('ビーンズクラブ会員対象品', key=1008)
+    col29, col29_1, col30, col31, col32 = st.beta_columns([3,3,2,2,2])
     with col29:
-        item08 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=29)
+        item08 = st.text_input('税込価格', value=0, key=29)
+    with col29_1:
+        if check08 == True:
+            item08 = st.text_input('割引後価格',  math.floor(int(item08) * 0.7), key=888)
     with col30:
-        amount08 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=30)
+        amount08 = st.text_input('数量', value=0, key=30)
     with col31:
         tax08 = st.selectbox('税率', [0.08, 0.1], key=31)
     with col32:
@@ -134,11 +166,15 @@ if 0 < product >= 8:
         point08_ = st.text_input('商品ポイント', Decimal(point08) * Decimal(amount08), key=32)
 
 if 0 < product >= 9:
-    col33, col34, col35, col36 = st.columns([4,3,2,2])
+    check09 = st.checkbox('ビーンズクラブ会員対象品', key=1009)
+    col33, col33_1, col34, col35, col36 = st.beta_columns([3,3,2,2,2])
     with col33:
-        item09 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=33)
+        item09 = st.text_input('税込価格', value=0, key=33)
+    with col33_1:
+        if check09 == True:
+            item09 = st.text_input('割引後価格',  math.floor(int(item09) * 0.7), key=999)
     with col34:
-        amount09 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=34)
+        amount09 = st.text_input('数量', value=0, key=34)
     with col35:
         tax09 = st.selectbox('税率', [0.08, 0.1], key=35)
     with col36:
@@ -146,11 +182,15 @@ if 0 < product >= 9:
         point09_ = st.text_input('商品ポイント', Decimal(point09) * Decimal(amount09), key=36)
 
 if 0 < product >= 10:
-    col37, col38, col39, col40 = st.columns([4,3,2,2])
+    check10 = st.checkbox('ビーンズクラブ会員対象品', key=1010)
+    col37, col37_1, col38, col39, col40 = st.beta_columns([3,3,2,2,2])
     with col37:
-        item10 = st.number_input('税込価格',  min_value=0, max_value=int(1000000), step=1, value=0, key=37)
+        item10 = st.text_input('税込価格', value=0, key=37)
+    with col37_1:
+        if check10 == True:
+            item10 = st.text_input('割引後価格',  math.floor(int(item10) * 0.7), key=999)
     with col38:
-        amount10 = st.number_input('数量',  min_value=0, max_value=int(1000000), step=1, value=0, key=38)
+        amount10 = st.text_input('数量', value=0, key=38)
     with col39:
         tax10 = st.selectbox('税率', [0.08, 0.1], key=39)
     with col40:
@@ -167,39 +207,49 @@ if product > 0:
             product01 = int(item01)
             point_re01 = math.floor(int((((Decimal(product01) * Decimal(amount01)) - Decimal(point)) / (Decimal(product01) * Decimal(amount01))) * Decimal(point01))) * Decimal(amount01)
             st.text_input('合計ポイント付与数', point_re01)
+        else:
+            st.text_input('合計ポイント付与数', 0)
     if int(product) == 2:
-        if int(point01_) > 0 and int(point02_) > 0:
-            product02 = int(item01 * amount01) + int(item02 * amount02)
+        if int(point01_) > 0 and int(point02_) >= 0:
+            product02 = int(int(item01) * int(amount01)) + int(int(item02) * int(amount02))
             point_re01 = math.floor(int((((Decimal(product02) - Decimal(point)) / Decimal(product02)) * Decimal(point01_))) * Decimal(amount01))
             point_re02 = math.floor(int((((Decimal(product02) - Decimal(point)) / Decimal(product02)) * Decimal(point02_))) * Decimal(amount02))
             st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02))
+        else:
+            st.text_input('合計ポイント付与数', 0)
     if int(product) == 3:
         if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0:
-            product03 = int(item01 * amount01) + int(item02 * amount02) + int(item03 * amount03)
+            product03 = int(int(item01) * int(amount01)) + int(int(item02) * int(amount02)) + int(int(item03) * int(amount03))
             point_re01 = math.floor(int((((Decimal(product03) - Decimal(point)) / Decimal(product03)) * Decimal(point01_))) * Decimal(amount01))
             point_re02 = math.floor(int((((Decimal(product03) - Decimal(point)) / Decimal(product03)) * Decimal(point02_))) * Decimal(amount02))
             point_re03 = math.floor(int((((Decimal(product03) - Decimal(point)) / Decimal(product03)) * Decimal(point03_))) * Decimal(amount03))
             st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03))
+        else:
+            st.text_input('合計ポイント付与数', 0)
     if int(product) == 4:
         if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0:
-            product04 = int(item01 * amount01) + int(item02 * amount02) + int(item03 * amount03) + int(item04 * amount04)
+            product04 = int(int(item01) * int(amount01)) + int(int(item02) * int(amount02)) + int(int(item03) * int(amount03)) + int(int(item04) * int(amount04))
             point_re01 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point01_))) * Decimal(amount01))
             point_re02 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point02_))) * Decimal(amount02))
             point_re03 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point03_))) * Decimal(amount03))
             point_re04 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point04_))) * Decimal(amount04))
             st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04))
+        else:
+            st.text_input('合計ポイント付与数', 0)
     if int(product) == 5:
         if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0:
-            product05 = int(item01 * amount01) + int(item02 * amount02) + int(item03 * amount03) + int(item04 * amount04) + int(item05 * amount05)
+            product05 = int(int(item01) * int(amount01)) + int(int(item02) * int(amount02)) + int(int(item03) * int(amount03)) + int(int(item04) * int(amount04)) + int(int(item05) * int(amount05))
             point_re01 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point01_))) * Decimal(amount01))
             point_re02 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point02_))) * Decimal(amount02))
             point_re03 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point03_))) * Decimal(amount03))
             point_re04 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point04_))) * Decimal(amount04))
             point_re05 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point05_))) * Decimal(amount05))
             st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05))
+        else:
+            st.text_input('合計ポイント付与数', 0)
     if int(product) == 6:
         if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0:
-            product06 = int(item01 * amount01) + int(item02 * amount02) + int(item03 * amount03) + int(item04 * amount04) + int(item05 * amount05) + int(item06 * amount06)
+            product06 = int(int(item01) * int(amount01)) + int(int(item02) * int(amount02)) + int(int(item03) * int(amount03)) + int(int(item04) * int(amount04)) + int(int(item05) * int(amount05)) + int(int(item06) * int(amount06))
             point_re01 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point01_))) * Decimal(amount01))
             point_re02 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point02_))) * Decimal(amount02))
             point_re03 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point03_))) * Decimal(amount03))
@@ -207,9 +257,11 @@ if product > 0:
             point_re05 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point05_))) * Decimal(amount05))
             point_re06 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point06_))) * Decimal(amount06))
             st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06))
+        else:
+            st.text_input('合計ポイント付与数', 0)
     if int(product) == 7:
         if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0 and int(point07_) > 0:
-            product07 = int(item01 * amount01) + int(item02 * amount02) + int(item03 * amount03) + int(item04 * amount04) + int(item05 * amount05) + int(item06 * amount06) + int(item07 * amount07)
+            product07 = int(int(item01) * int(amount01)) + int(int(item02) * int(amount02)) + int(int(item03) * int(amount03)) + int(int(item04) * int(amount04)) + int(int(item05) * int(amount05)) + int(int(item06) * int(amount06)) + int(int(item07) * int(amount07))
             point_re01 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point01_))) * Decimal(amount01))
             point_re02 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point02_))) * Decimal(amount02))
             point_re03 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point03_))) * Decimal(amount03))
@@ -218,9 +270,11 @@ if product > 0:
             point_re06 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point06_))) * Decimal(amount06))
             point_re07 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point07_))) * Decimal(amount07))
             st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06) + int(point_re07))
+        else:
+            st.text_input('合計ポイント付与数', 0)
     if int(product) == 8:
         if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0 and int(point07_) > 0 and int(point08_) > 0:
-            product08 = int(item01 * amount01) + int(item02 * amount02) + int(item03 * amount03) + int(item04 * amount04) + int(item05 * amount05) + int(item06 * amount06) + int(item07 * amount07) + int(item08 * amount08)
+            product08 = int(int(item01) * int(amount01)) + int(int(item02) * int(amount02)) + int(int(item03) * int(amount03)) + int(int(item04) * int(amount04)) + int(int(item05) * int(amount05)) + int(int(item06) * int(amount06)) + int(int(item07) * int(amount07)) + int(int(item08) * int(amount08))
             point_re01 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point01_))) * Decimal(amount01))
             point_re02 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point02_))) * Decimal(amount02))
             point_re03 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point03_))) * Decimal(amount03))
@@ -230,9 +284,11 @@ if product > 0:
             point_re07 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point07_))) * Decimal(amount07))
             point_re08 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point08_))) * Decimal(amount08))
             st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06) + int(point_re07) + int(point_re08))
+        else:
+            st.text_input('合計ポイント付与数', 0)
     if int(product) == 9:
         if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0 and int(point07_) > 0 and int(point08_) > 0 and int(point09_) > 0:
-            product09 = int(item01 * amount01) + int(item02 * amount02) + int(item03 * amount03) + int(item04 * amount04) + int(item05 * amount05) + int(item06 * amount06) + int(item07 * amount07) + int(item08 * amount08) + int(item09 * amount09)
+            product09 = int(int(item01) * int(amount01)) + int(int(item02) * int(amount02)) + int(int(item03) * int(amount03)) + int(int(item04) * int(amount04)) + int(int(item05) * int(amount05)) + int(int(item06) * int(amount06)) + int(int(item07) * int(amount07)) + int(int(item08) * int(amount08)) + int(int(item09) * int(amount09))
             point_re01 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point01_))) * Decimal(amount01))
             point_re02 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point02_))) * Decimal(amount02))
             point_re03 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point03_))) * Decimal(amount03))
@@ -243,9 +299,11 @@ if product > 0:
             point_re08 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point08_))) * Decimal(amount08))
             point_re09 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point09_))) * Decimal(amount09))
             st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06) + int(point_re07) + int(point_re08) + int(point_re09))
+        else:
+            st.text_input('合計ポイント付与数', 0)
     if int(product) == 10:
         if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0 and int(point07_) > 0 and int(point08_) > 0 and int(point09_) > 0 and int(point10_) > 0:
-            product10 = int(item01 * amount01) + int(item02 * amount02) + int(item03 * amount03) + int(item04 * amount04) + int(item05 * amount05) + int(item06 * amount06) + int(item07 * amount07) + int(item08 * amount08) + int(item09 * amount09) + int(item10 * amount10)
+            product10 = int(int(item01) * int(amount01)) + int(int(item02) * int(amount02)) + int(int(item03) * int(amount03)) + int(int(item04) * int(amount04)) + int(int(item05) * int(amount05)) + int(int(item06) * int(amount06)) + int(int(item07) * int(amount07)) + int(int(item08) * int(amount08)) + int(int(item09) * int(amount09)) + int(int(item10) * int(amount10))
             point_re01 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point01_))) * Decimal(amount01))
             point_re02 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point02_))) * Decimal(amount02))
             point_re03 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point03_))) * Decimal(amount03))
@@ -257,5 +315,7 @@ if product > 0:
             point_re09 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point09_))) * Decimal(amount09))
             point_re10 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point10_))) * Decimal(amount10))
             st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06) + int(point_re07) + int(point_re08) + int(point_re09) + int(point_re10))
+        else:
+            st.text_input('合計ポイント付与数', 0)
 
 
