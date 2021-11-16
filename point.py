@@ -25,10 +25,12 @@ gold = 0.02
 silver = 0.01
 white = 0.01
 
+beans_club = 0.7
+
 if selected_item == '受注設定':
     rank = st.sidebar.selectbox('会員ランク', ['シルバー会員', 'ゴールド会員', 'ダイヤモンド会員', 'ホワイト会員'])
     point = st.sidebar.number_input('利用ポイント', value=0, key=0)
-    product = st.sidebar.number_input('商品数', min_value=0, max_value=10, value=0, key=99)
+    product = st.sidebar.number_input('商品数', min_value=0, max_value=10, value=1, key=99)
 
     if rank == 'ダイヤモンド会員':
         rank_per = diamond
@@ -45,13 +47,14 @@ if selected_item == '受注設定':
         st.write('商品数を入力してください')
 
     if 0 < product >= 1:
+        st.write('※１行目にポイントが発生しない商品を入れないでください。')
         check01 = st.checkbox('ビーンズクラブ会員対象品', key=1001)
         col01, col01_1, col02, col03, col04 = st.columns([3,3,2,2,2])
         with col01:
             item01 = st.text_input('税込価格', value=0, key=1)
         with col01_1:
             if check01 == True:
-                item01 = st.text_input('割引後価格',  math.floor((Decimal(item01) * Decimal(0.7))), key=111)
+                item01 = st.text_input('割引後価格',  math.floor((Decimal(item01) * Decimal(beans_club))), key=111)
         with col02:
             amount01 = st.text_input('数量', value=0, key=2)
         with col03:
@@ -67,7 +70,7 @@ if selected_item == '受注設定':
             item02 = st.text_input('税込価格', value=0, key=5)
         with col05_1:
             if check02 == True:
-                item02 = st.text_input('割引後価格',  math.floor((Decimal(item02) * Decimal(0.7))), key=222)
+                item02 = st.text_input('割引後価格',  math.floor((Decimal(item02) * Decimal(beans_club))), key=222)
         with col06:
             amount02 = st.text_input('数量', value=0, key=6)
         with col07:
@@ -83,7 +86,7 @@ if selected_item == '受注設定':
             item03 = st.text_input('税込価格', value=0, key=9)
         with col09_1:
             if check03 == True:
-                item03 = st.text_input('割引後価格', math.floor((Decimal(item03) * Decimal(0.7))), key=333)
+                item03 = st.text_input('割引後価格', math.floor((Decimal(item03) * Decimal(beans_club))), key=333)
         with col10:
             amount03 = st.text_input('数量', value=0, key=10)
         with col11:
@@ -99,7 +102,7 @@ if selected_item == '受注設定':
             item04 = st.text_input('税込価格', value=0, key=13)
         with col13_1:
             if check04 == True:
-                item04 = st.text_input('割引後価格',  math.floor((Decimal(item04) * Decimal(0.7))), key=444)
+                item04 = st.text_input('割引後価格',  math.floor((Decimal(item04) * Decimal(beans_club))), key=444)
         with col14:
             amount04 = st.text_input('数量', value=0, key=14)
         with col15:
@@ -115,7 +118,7 @@ if selected_item == '受注設定':
             item05 = st.text_input('税込価格', value=0, key=17)
         with col17_1:
             if check05 == True:
-                item05 = st.text_input('割引後価格',  math.floor((Decimal(item05) * Decimal(0.7))), key=555)
+                item05 = st.text_input('割引後価格',  math.floor((Decimal(item05) * Decimal(beans_club))), key=555)
         with col18:
             amount05 = st.text_input('数量', value=0, key=18)
         with col19:
@@ -131,7 +134,7 @@ if selected_item == '受注設定':
             item06 = st.text_input('税込価格', value=0, key=21)
         with col21_1:
             if check06 == True:
-                item06 = st.text_input('割引後価格',  math.floor((Decimal(item06) * Decimal(0.7))), key=666)
+                item06 = st.text_input('割引後価格',  math.floor((Decimal(item06) * Decimal(beans_club))), key=666)
         with col22:
             amount06 = st.text_input('数量', value=0, key=22)
         with col23:
@@ -147,7 +150,7 @@ if selected_item == '受注設定':
             item07 = st.text_input('税込価格', value=0, key=25)
         with col25_1:
             if check07 == True:
-                item07 = st.text_input('割引後価格',  math.floor((Decimal(item07) * Decimal(0.7))), key=777)
+                item07 = st.text_input('割引後価格',  math.floor((Decimal(item07) * Decimal(beans_club))), key=777)
         with col26:
             amount07 = st.text_input('数量', value=0, key=26)
         with col27:
@@ -163,7 +166,7 @@ if selected_item == '受注設定':
             item08 = st.text_input('税込価格', value=0, key=29)
         with col29_1:
             if check08 == True:
-                item08 = st.text_input('割引後価格',  math.floor((Decimal(item08) * Decimal(0.7))), key=888)
+                item08 = st.text_input('割引後価格',  math.floor((Decimal(item08) * Decimal(beans_club))), key=888)
         with col30:
             amount08 = st.text_input('数量', value=0, key=30)
         with col31:
@@ -179,7 +182,7 @@ if selected_item == '受注設定':
             item09 = st.text_input('税込価格', value=0, key=33)
         with col33_1:
             if check09 == True:
-                item09 = st.text_input('割引後価格',  math.floor((Decimal(item09) * Decimal(0.7))), key=999)
+                item09 = st.text_input('割引後価格',  math.floor((Decimal(item09) * Decimal(beans_club))), key=999)
         with col34:
             amount09 = st.text_input('数量', value=0, key=34)
         with col35:
@@ -195,7 +198,7 @@ if selected_item == '受注設定':
             item10 = st.text_input('税込価格', value=0, key=37)
         with col37_1:
             if check10 == True:
-                item10 = st.text_input('割引後価格',  math.floor((Decimal(item10) * Decimal(0.7))), key=999)
+                item10 = st.text_input('割引後価格',  math.floor((Decimal(item10) * Decimal(beans_club))), key=1000)
         with col38:
             amount10 = st.text_input('数量', value=0, key=38)
         with col39:
@@ -212,20 +215,20 @@ if selected_item == '受注設定':
         if int(product) == 1:
             if int(point01_) > 0:
                 product01 = int(item01)
-                point_re01 = math.floor(int((((Decimal(product01)) - Decimal(point)) / (Decimal(product01))) * Decimal(point01))) * Decimal(amount01)
+                point_re01 = math.floor(int((((Decimal(product01)) - Decimal(point)) / (Decimal(product01))) * Decimal(point01)) * Decimal(amount01))
                 st.text_input('合計ポイント付与数', point_re01)
             else:
-                st.text_input('合計ポイント付与数', 0)
+                st.text_input('合計ポイント付与数', '')
         if int(product) == 2:
             if int(point01_) > 0 and int(point02_) >= 0:
                 product02 = int(int(item01) + int(int(item02)))
-                point_re01 = math.floor(int((((Decimal(product02) - Decimal(point)) / Decimal(product02)) * Decimal(point01_))) * Decimal(amount01))
-                point_re02 = math.floor(int((((Decimal(product02) - Decimal(point)) / Decimal(product02)) * Decimal(point02_))) * Decimal(amount02))
+                point_re01 = math.floor(int((((Decimal(product02) - Decimal(point)) / Decimal(product02)) * Decimal(point01))) * Decimal(amount01))
+                point_re02 = math.floor(int((((Decimal(product02) - Decimal(point)) / Decimal(product02)) * Decimal(point02))) * Decimal(amount02))
                 st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02))
             else:
-                st.text_input('合計ポイント付与数', 0)
+                st.text_input('合計ポイント付与数', '')
         if int(product) == 3:
-            if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0:
+            if int(point01_) > 0 and int(point02_) >= 0 and int(point03_) >= 0:
                 product03 = int(int(item01)) + int(int(item02)) + int(int(item03))
                 point_re01 = math.floor(int((((Decimal(product03) - Decimal(point)) / Decimal(product03)) * Decimal(point01))) * Decimal(amount01))
                 point_re02 = math.floor(int((((Decimal(product03) - Decimal(point)) / Decimal(product03)) * Decimal(point02))) * Decimal(amount02))
@@ -234,96 +237,96 @@ if selected_item == '受注設定':
             else:
                 st.text_input('合計ポイント付与数', '')
         if int(product) == 4:
-            if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0:
+            if int(point01_) > 0 and int(point02_) >= 0 and int(point03_) >= 0 and int(point04_) >= 0:
                 product04 = int(int(item01)) + int(int(item02)) + int(int(item03)) + int(int(item04))
-                point_re01 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point01_))) * Decimal(amount01))
-                point_re02 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point02_))) * Decimal(amount02))
-                point_re03 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point03_))) * Decimal(amount03))
-                point_re04 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point04_))) * Decimal(amount04))
+                point_re01 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point01))) * Decimal(amount01))
+                point_re02 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point02))) * Decimal(amount02))
+                point_re03 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point03))) * Decimal(amount03))
+                point_re04 = math.floor(int((((Decimal(product04) - Decimal(point)) / Decimal(product04)) * Decimal(point04))) * Decimal(amount04))
                 st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04))
             else:
-                st.text_input('合計ポイント付与数', 0)
+                st.text_input('合計ポイント付与数', '')
         if int(product) == 5:
-            if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0:
+            if int(point01_) > 0 and int(point02_) >= 0 and int(point03_) >= 0 and int(point04_) >= 0 and int(point05_) >= 0:
                 product05 = int(int(item01)) + int(int(item02)) + int(int(item03)) + int(int(item04)) + int(int(item05))
-                point_re01 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point01_))) * Decimal(amount01))
-                point_re02 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point02_))) * Decimal(amount02))
-                point_re03 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point03_))) * Decimal(amount03))
-                point_re04 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point04_))) * Decimal(amount04))
-                point_re05 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point05_))) * Decimal(amount05))
+                point_re01 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point01))) * Decimal(amount01))
+                point_re02 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point02))) * Decimal(amount02))
+                point_re03 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point03))) * Decimal(amount03))
+                point_re04 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point04))) * Decimal(amount04))
+                point_re05 = math.floor(int((((Decimal(product05) - Decimal(point)) / Decimal(product05)) * Decimal(point05))) * Decimal(amount05))
                 st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05))
             else:
-                st.text_input('合計ポイント付与数', 0)
+                st.text_input('合計ポイント付与数', '')
         if int(product) == 6:
-            if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0:
+            if int(point01_) > 0 and int(point02_) >= 0 and int(point03_) >= 0 and int(point04_) >= 0 and int(point05_) >= 0 and int(point06_) >= 0:
                 product06 = int(int(item01)) + int(int(item02)) + int(int(item03)) + int(int(item04)) + int(int(item05)) + int(int(item06))
-                point_re01 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point01_))) * Decimal(amount01))
-                point_re02 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point02_))) * Decimal(amount02))
-                point_re03 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point03_))) * Decimal(amount03))
-                point_re04 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point04_))) * Decimal(amount04))
-                point_re05 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point05_))) * Decimal(amount05))
-                point_re06 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point06_))) * Decimal(amount06))
+                point_re01 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point01))) * Decimal(amount01))
+                point_re02 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point02))) * Decimal(amount02))
+                point_re03 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point03))) * Decimal(amount03))
+                point_re04 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point04))) * Decimal(amount04))
+                point_re05 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point05))) * Decimal(amount05))
+                point_re06 = math.floor(int((((Decimal(product06) - Decimal(point)) / Decimal(product06)) * Decimal(point06))) * Decimal(amount06))
                 st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06))
             else:
-                st.text_input('合計ポイント付与数', 0)
+                st.text_input('合計ポイント付与数', '')
         if int(product) == 7:
-            if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0 and int(point07_) > 0:
+            if int(point01_) > 0 and int(point02_) >= 0 and int(point03_) >= 0 and int(point04_) >= 0 and int(point05_) >= 0 and int(point06_) >= 0 and int(point07_) >= 0:
                 product07 = int(int(item01)) + int(int(item02)) + int(int(item03)) + int(int(item04)) + int(int(item05)) + int(int(item06)) + int(int(item07))
-                point_re01 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point01_))) * Decimal(amount01))
-                point_re02 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point02_))) * Decimal(amount02))
-                point_re03 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point03_))) * Decimal(amount03))
-                point_re04 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point04_))) * Decimal(amount04))
-                point_re05 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point05_))) * Decimal(amount05))
-                point_re06 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point06_))) * Decimal(amount06))
-                point_re07 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point07_))) * Decimal(amount07))
+                point_re01 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point01))) * Decimal(amount01))
+                point_re02 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point02))) * Decimal(amount02))
+                point_re03 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point03))) * Decimal(amount03))
+                point_re04 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point04))) * Decimal(amount04))
+                point_re05 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point05))) * Decimal(amount05))
+                point_re06 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point06))) * Decimal(amount06))
+                point_re07 = math.floor(int((((Decimal(product07) - Decimal(point)) / Decimal(product07)) * Decimal(point07))) * Decimal(amount07))
                 st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06) + int(point_re07))
             else:
-                st.text_input('合計ポイント付与数', 0)
+                st.text_input('合計ポイント付与数', '')
         if int(product) == 8:
-            if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0 and int(point07_) > 0 and int(point08_) > 0:
+            if int(point01_) > 0 and int(point02_) >= 0 and int(point03_) >= 0 and int(point04_) >= 0 and int(point05_) >= 0 and int(point06_) >= 0 and int(point07_) >= 0 and int(point08_) >= 0:
                 product08 = int(int(item01)) + int(int(item02)) + int(int(item03)) + int(int(item04)) + int(int(item05)) + int(int(item06)) + int(int(item07)) + int(int(item08))
-                point_re01 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point01_))) * Decimal(amount01))
-                point_re02 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point02_))) * Decimal(amount02))
-                point_re03 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point03_))) * Decimal(amount03))
-                point_re04 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point04_))) * Decimal(amount04))
-                point_re05 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point05_))) * Decimal(amount05))
-                point_re06 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point06_))) * Decimal(amount06))
-                point_re07 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point07_))) * Decimal(amount07))
-                point_re08 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point08_))) * Decimal(amount08))
+                point_re01 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point01))) * Decimal(amount01))
+                point_re02 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point02))) * Decimal(amount02))
+                point_re03 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point03))) * Decimal(amount03))
+                point_re04 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point04))) * Decimal(amount04))
+                point_re05 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point05))) * Decimal(amount05))
+                point_re06 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point06))) * Decimal(amount06))
+                point_re07 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point07))) * Decimal(amount07))
+                point_re08 = math.floor(int((((Decimal(product08) - Decimal(point)) / Decimal(product08)) * Decimal(point08))) * Decimal(amount08))
                 st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06) + int(point_re07) + int(point_re08))
             else:
-                st.text_input('合計ポイント付与数', 0)
+                st.text_input('合計ポイント付与数', '')
         if int(product) == 9:
-            if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0 and int(point07_) > 0 and int(point08_) > 0 and int(point09_) > 0:
+            if int(point01_) > 0 and int(point02_) >= 0 and int(point03_) >= 0 and int(point04_) >= 0 and int(point05_) >= 0 and int(point06_) >= 0 and int(point07_) >= 0 and int(point08_) >= 0 and int(point09_) >= 0:
                 product09 = int(int(item01)) + int(int(item02)) + int(int(item03)) + int(int(item04)) + int(int(item05)) + int(int(item06)) + int(int(item07)) + int(int(item08)) + int(int(item09))
-                point_re01 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point01_))) * Decimal(amount01))
-                point_re02 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point02_))) * Decimal(amount02))
-                point_re03 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point03_))) * Decimal(amount03))
-                point_re04 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point04_))) * Decimal(amount04))
-                point_re05 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point05_))) * Decimal(amount05))
-                point_re06 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point06_))) * Decimal(amount06))
-                point_re07 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point07_))) * Decimal(amount07))
-                point_re08 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point08_))) * Decimal(amount08))
-                point_re09 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point09_))) * Decimal(amount09))
+                point_re01 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point01))) * Decimal(amount01))
+                point_re02 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point02))) * Decimal(amount02))
+                point_re03 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point03))) * Decimal(amount03))
+                point_re04 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point04))) * Decimal(amount04))
+                point_re05 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point05))) * Decimal(amount05))
+                point_re06 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point06))) * Decimal(amount06))
+                point_re07 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point07))) * Decimal(amount07))
+                point_re08 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point08))) * Decimal(amount08))
+                point_re09 = math.floor(int((((Decimal(product09) - Decimal(point)) / Decimal(product09)) * Decimal(point09))) * Decimal(amount09))
                 st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06) + int(point_re07) + int(point_re08) + int(point_re09))
             else:
-                st.text_input('合計ポイント付与数', 0)
+                st.text_input('合計ポイント付与数', '')
         if int(product) == 10:
-            if int(point01_) > 0 and int(point02_) > 0 and int(point03_) > 0 and int(point04_) > 0 and int(point05_) > 0 and int(point06_) > 0 and int(point07_) > 0 and int(point08_) > 0 and int(point09_) > 0 and int(point10_) > 0:
+            if int(point01_) > 0 and int(point02_) >= 0 and int(point03_) >= 0 and int(point04_) >= 0 and int(point05_) >= 0 and int(point06_) >= 0 and int(point07_) >= 0 and int(point08_) >= 0 and int(point09_) >= 0 and int(point10_) >= 0:
                 product10 = int(int(item01)) + int(int(item02)) + int(int(item03)) + int(int(item04)) + int(int(item05)) + int(int(item06)) + int(int(item07)) + int(int(item08)) + int(int(item09)) + int(int(item10))
-                point_re01 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point01_))) * Decimal(amount01))
-                point_re02 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point02_))) * Decimal(amount02))
-                point_re03 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point03_))) * Decimal(amount03))
-                point_re04 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point04_))) * Decimal(amount04))
-                point_re05 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point05_))) * Decimal(amount05))
-                point_re06 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point06_))) * Decimal(amount06))
-                point_re07 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point07_))) * Decimal(amount07))
-                point_re08 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point08_))) * Decimal(amount08))
-                point_re09 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point09_))) * Decimal(amount09))
-                point_re10 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point10_))) * Decimal(amount10))
+                point_re01 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point01))) * Decimal(amount01))
+                point_re02 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point02))) * Decimal(amount02))
+                point_re03 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point03))) * Decimal(amount03))
+                point_re04 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point04))) * Decimal(amount04))
+                point_re05 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point05))) * Decimal(amount05))
+                point_re06 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point06))) * Decimal(amount06))
+                point_re07 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point07))) * Decimal(amount07))
+                point_re08 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point08))) * Decimal(amount08))
+                point_re09 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point09))) * Decimal(amount09))
+                point_re10 = math.floor(int((((Decimal(product10) - Decimal(point)) / Decimal(product10)) * Decimal(point10))) * Decimal(amount10))
                 st.text_input('合計ポイント付与数', int(point_re01) + int(point_re02) + int(point_re03) + int(point_re04) + int(point_re05) + int(point_re06) + int(point_re07) + int(point_re08) + int(point_re09) + int(point_re10))
             else:
-                st.text_input('合計ポイント付与数', 0)
+                st.text_input('合計ポイント付与数', '')
 
 else:
     st.markdown(rf'''
