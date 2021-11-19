@@ -49,7 +49,9 @@ if selected_item == '受注設定':
     if 0 < product >= 1:
         st.write('※１行目にポイントが発生しない商品を入れないでください。')
         check01 = st.checkbox('ビーンズクラブ会員対象品', key=1001)
-        col01, col01_1, col02, col03, col04 = st.columns([3,3,2,2,2])
+        col03, col01, col01_1, col01_2, col02, col04 = st.columns([2,2,2,2,2,2])
+        with col03:
+            tax01 = st.selectbox('税率', [0.08, 0.1], key=3)
         with col01:
             item01 = st.text_input('税込価格', value=0, key=1)
         with col01_1:
@@ -57,15 +59,15 @@ if selected_item == '受注設定':
                 item01 = st.text_input('割引後価格',  math.floor((Decimal(item01) * Decimal(beans_club))), key=111)
         with col02:
             amount01 = st.text_input('数量', value=0, key=2)
-        with col03:
-            tax01 = st.selectbox('税率', [0.08, 0.1], key=3)
         with col04:
             point01 = math.floor(int((Decimal(item01) / Decimal(1+tax01)) * Decimal(rank_per)))
             point01_ = st.text_input('商品ポイント', Decimal(point01) * Decimal(amount01), key=4)
+        with col01_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item01) / Decimal(1+tax01))), key=2001)
 
     if 0 < product >= 2:
         check02 = st.checkbox('ビーンズクラブ会員対象品', key=1002)
-        col05, col05_1, col06, col07, col08 = st.columns([3,3,2,2,2])
+        col07, col05, col05_1, col05_2, col06, col08 = st.columns([2,2,2,2,2,2])
         with col05:
             item02 = st.text_input('税込価格', value=0, key=5)
         with col05_1:
@@ -78,10 +80,12 @@ if selected_item == '受注設定':
         with col08:
             point02 = math.floor(int((Decimal(item02) / Decimal(1+tax02)) * Decimal(rank_per)))
             point02_ = st.text_input('商品ポイント', Decimal(point02) * Decimal(amount02), key=8)
+        with col05_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item02) / Decimal(1+tax02))), key=2002)
 
     if 0 < product >= 3:
         check03 = st.checkbox('ビーンズクラブ会員対象品', key=1003)
-        col09, col09_1, col10, col11, col12 = st.columns([3,3,2,2,2])
+        col11, col09, col09_1, col09_2, col10, col12 = st.columns([2,2,2,2,2,2])
         with col09:
             item03 = st.text_input('税込価格', value=0, key=9)
         with col09_1:
@@ -94,10 +98,12 @@ if selected_item == '受注設定':
         with col12:
             point03 = math.floor(int((Decimal(item03) / Decimal(1+tax03)) * Decimal(rank_per)))
             point03_ = st.text_input('商品ポイント', Decimal(point03) * Decimal(amount03), key=12)
+        with col09_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item03) / Decimal(1+tax03))), key=2003)
 
     if 0 < product >= 4:
         check04 = st.checkbox('ビーンズクラブ会員対象品', key=1004)
-        col13, col13_1, col14, col15, col16 = st.columns([3,3,2,2,2])
+        col15, col13, col13_1, col13_2, col14, col16 = st.columns([2,2,2,2,2,2])
         with col13:
             item04 = st.text_input('税込価格', value=0, key=13)
         with col13_1:
@@ -110,10 +116,12 @@ if selected_item == '受注設定':
         with col16:
             point04 = math.floor(int((Decimal(item04) / Decimal(1+tax04)) * Decimal(rank_per)))
             point04_ = st.text_input('商品ポイント', Decimal(point04) * Decimal(amount04), key=16)
+        with col13_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item04) / Decimal(1+tax04))), key=2004)
 
     if 0 < product >= 5:
         check05 = st.checkbox('ビーンズクラブ会員対象品', key=1005)
-        col17, col17_1, col18, col19, col20 = st.columns([3,3,2,2,2])
+        col19, col17, col17_1, col17_2, col18, col20 = st.columns([2,2,2,2,2,2])
         with col17:
             item05 = st.text_input('税込価格', value=0, key=17)
         with col17_1:
@@ -126,10 +134,12 @@ if selected_item == '受注設定':
         with col20:
             point05 = math.floor(int((Decimal(item05) / Decimal(1+tax05)) * Decimal(rank_per)))
             point05_ = st.text_input('商品ポイント', Decimal(point05) * Decimal(amount05), key=20)
+        with col17_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item05) / Decimal(1+tax05))), key=2005)
 
     if 0 < product >= 6:
         check06 = st.checkbox('ビーンズクラブ会員対象品', key=1006)
-        col21, col21_1, col22, col23, col24 = st.columns([3,3,2,2,2])
+        col23, col21, col21_1, col21_2, col22, col24 = st.columns([2,2,2,2,2,2])
         with col21:
             item06 = st.text_input('税込価格', value=0, key=21)
         with col21_1:
@@ -142,10 +152,12 @@ if selected_item == '受注設定':
         with col24:
             point06 = math.floor(int((Decimal(item06) / Decimal(1+tax06)) * Decimal(rank_per)))
             point06_ = st.text_input('商品ポイント', Decimal(point06) * Decimal(amount06), key=24)
+        with col21_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item06) / Decimal(1+tax06))), key=2006)
 
     if 0 < product >= 7:
         check07 = st.checkbox('ビーンズクラブ会員対象品', key=1007)
-        col25, col25_1, col26, col27, col28 = st.columns([3,3,2,2,2])
+        col27, col25, col25_1, col25_2, col26, col28 = st.columns([2,2,2,2,2,2])
         with col25:
             item07 = st.text_input('税込価格', value=0, key=25)
         with col25_1:
@@ -158,10 +170,12 @@ if selected_item == '受注設定':
         with col28:
             point07 = math.floor(int((Decimal(item07) / Decimal(1+tax07)) * Decimal(rank_per)))
             point07_ = st.text_input('商品ポイント', Decimal(point07) * Decimal(amount07), key=28)
+        with col25_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item07) / Decimal(1+tax07))), key=2007)
 
     if 0 < product >= 8:
         check08 = st.checkbox('ビーンズクラブ会員対象品', key=1008)
-        col29, col29_1, col30, col31, col32 = st.columns([3,3,2,2,2])
+        col31, col29, col29_1, col29_2, col30, col32 = st.columns([2,2,2,2,2,2])
         with col29:
             item08 = st.text_input('税込価格', value=0, key=29)
         with col29_1:
@@ -174,10 +188,12 @@ if selected_item == '受注設定':
         with col32:
             point08 = math.floor(int((Decimal(item08) / Decimal(1+tax08)) * Decimal(rank_per)))
             point08_ = st.text_input('商品ポイント', Decimal(point08) * Decimal(amount08), key=32)
+        with col29_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item08) / Decimal(1+tax08))), key=2008)
 
     if 0 < product >= 9:
         check09 = st.checkbox('ビーンズクラブ会員対象品', key=1009)
-        col33, col33_1, col34, col35, col36 = st.columns([3,3,2,2,2])
+        col35, col33, col33_1, col33_2, col34, col36 = st.columns([2,2,2,2,2,2])
         with col33:
             item09 = st.text_input('税込価格', value=0, key=33)
         with col33_1:
@@ -190,10 +206,12 @@ if selected_item == '受注設定':
         with col36:
             point09 = math.floor(int((Decimal(item09) / Decimal(1+tax09)) * Decimal(rank_per)))
             point09_ = st.text_input('商品ポイント', Decimal(point09) * Decimal(amount09), key=36)
+        with col33_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item09) / Decimal(1+tax09))), key=2009)
 
     if 0 < product >= 10:
         check10 = st.checkbox('ビーンズクラブ会員対象品', key=1010)
-        col37, col37_1, col38, col39, col40 = st.columns([3,3,2,2,2])
+        col39, col37, col37_1, col37_2, col38, col40 = st.columns([2,2,2,2,2,2])
         with col37:
             item10 = st.text_input('税込価格', value=0, key=37)
         with col37_1:
@@ -206,6 +224,8 @@ if selected_item == '受注設定':
         with col40:
             point10 = math.floor(int((Decimal(item10) / Decimal(1+tax10)) * Decimal(rank_per)))
             point10_ = st.text_input('商品ポイント', Decimal(point10) * Decimal(amount10), key=40)
+        with col37_2:
+            st.text_input('税抜価格', math.floor(int(Decimal(item10) / Decimal(1+tax10))), key=2010)
 
 
     if product > 0:
